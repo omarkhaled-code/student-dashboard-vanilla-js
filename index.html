@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Student List Dashboard</h1>
+        <div class="header">
+            <div class="actions">
+                <button class="add">+ Add New Student</button>
+                <button class="delete">+ Delete All Student</button>
+            </div>
+            <h4 class="total-students">Total Students: <span></span></h4>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+        <div class="add-new-student form none">
+            <h3>Add New Student</h3>
+            <div class="input">
+                <label for="name">Name</label>
+                <p class="none">Please enter a valid and uniqe name!</p>
+                <input type="text" placeholder="Name..." id="new_name">
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <p class="none">Please enter a valid email address!</p>
+                <input type="email" placeholder="Email..." id="new_email">
+            </div>
+            <div class="input">
+                <label for="phone">Name</label>
+                <p class="none">Please enter a vaild phone number!</p>
+                <input type="text" placeholder="phone..." id="new_phone">
+            </div>
+            <div class="buttons">
+                <button class="cancel-create">Cancel</button>
+                <button class="create">Create</button>
+            </div>
+        </div>
+        <div class="edit-student form none">
+            <h3>Edit Student</h3>
+            <div class="input">
+                <label for="name">Name</label>
+                <p class="none">Please enter a valid and uniqe name!</p>
+                <input type="text" placeholder="Name..." id="current_name">
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <p class="none">Please enter a valid email address!</p>
+                <input type="email" placeholder="Email..." id="current_email">
+            </div>
+            <div class="input">
+                <label for="phone">Name</label>
+                <p class="none">Please enter a vaild phone number!</p>
+                <input type="text" placeholder="phone..." id="current_phone">
+            </div>
+            <div class="buttons">
+                <button class="cancel-update">Cancel</button>
+                <button class="save">Update</button>
+            </div>
+        </div>
+        <div class="overlay none"></div>
+    </div>
+    <!-- <script src="updated.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

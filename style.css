@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma;
+}
+
+:root {
+    --main-color: #336BED;
+    --ligth-blue-color:#E4E8F6;
+    --text-blue:#145BEC;
+    --delete-color:#D42E39;
+    --light-red-color:#DC3545;
+    --darker-text:#101218;
+    --dark-text:#35363A;
+    --ligth-text:#616F89;
+    --border-color:#DBDFE6;
+}
+
+.container {
+    padding: 2rem 1rem;
+    margin: auto;
+    width: 90%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 2.5rem;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .actions {
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+
+/* Header Style */
+.table-wrapper {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table thead tr, table tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+table th {
+    padding: 1rem 1.5rem;
+}
+ table td {
+    padding: 1.5rem;
+}
+table th {
+    font-size: 1rem;
+}
+table td {
+    font-size: 1.1rem;
+}
+table td:not(.name) {
+    color: var(--ligth-text);
+}
+
+table .actions {
+    display: flex;
+    gap: 1.5rem;
+    span {
+        cursor: pointer;
+    }
+    .update {
+        color: var(--text-blue);
+    }
+    .delete {
+        color: var(--delete-color);
+    }
+}
+
+
+
+/* Buttons Style */
+button {
+    padding: .5rem 1rem;
+    width: 200px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+button.add {
+    background-color: var(--main-color);
+}
+button.add:hover {
+    background-color: transparent;
+    border-color: var(--main-color);
+    color: var(--text-blue);
+}
+
+button.delete {
+    background-color: var(--delete-color);
+}
+
+button.delete:hover {
+    background-color: transparent;
+    color: var(--delete-color);
+    border-color: var(--delete-color);
+}
+
+.total-students {
+    background-color: var(--ligth-blue-color);
+    color: var(--text-blue);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+
+/* Create New Student Style */
+/* .add-new-student { */
+.form{
+    width: 400px;
+    min-height: 425px;
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    gap:1.6rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: .3s;
+    
+     h3 {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+        text-align: center;
+        font-weight: bold;
+     }
+     .input {
+        display: flex;
+        flex-direction: column;
+        gap:.5rem;
+        input{
+            padding: .6rem 1.2rem;
+            width: 100%;
+            border-radius: .5rem;
+            border: 1px solid var(--border-color);
+            outline: var(--main-color);
+        }
+        p {
+            color: var(--light-red-color);
+            font-size: .8rem;
+        
+        }
+     }
+     .error input{
+
+        border-color: var(--light-red-color);
+     }
+     .buttons {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 1rem;
+        button {
+            width: 100px;
+        }
+        
+     }
+
+}
+.add-new-student {
+        button.create {
+            background-color: var(--main-color);
+            color: white;
+        }
+        
+        button:not(.create){
+            color: var(--darker-text);
+            background-color: transparent;
+            
+        }
+}
+
+.edit-student {
+        button.save {
+            background-color: var(--main-color);
+            color: white;
+        }
+        
+        button:not(.save){
+            color: var(--darker-text);
+            background-color: transparent;
+            
+        }
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+
+}
+
+.none {
+    display: none;
+}
